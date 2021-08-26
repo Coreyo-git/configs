@@ -1,2 +1,2 @@
 # configs
-Random confiigs
+Linux Config files
