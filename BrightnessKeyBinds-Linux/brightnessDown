@@ -1,0 +1,21 @@
+#!/bin/bash
+DISPLAY=":0.0" 	# The Current display for script wierd issue with xRandr I haven't looked into yet
+CURRENT_DISPLAY="DP-0" # The screen you wish to target
+STEP=0.10 	# How much the brighness will increase or decrease
+OPERATOR=-
+
+# Prints the current xrandr settings for Brigtness
+# Greps the line that includes brightness
+# Greps using regex matching numbers and decimal
+# Stores result in CurrentBrightness
+
+CurrentBrightness=$( xrandr --verbose --current | grep Brightness | grep -o -E '[0-9+.]+')
+
+set_brightness () {
+	#NewBrightness = 	   CurrentBrightness  + or -  STEP to bc for float arithmetic
+	newBrightness=$( echo $CurrentBrightness$OPERATOR$STEP | bc)	
+	xrandr --output $CURRENT_DISPLAY --brightness $newBrightness
+}
+
+
+set_brightness

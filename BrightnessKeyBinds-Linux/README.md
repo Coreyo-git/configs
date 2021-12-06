@@ -1,0 +1,1 @@
+# A bash script to set brightness up and down on a linux host using xrandr, xbindkeys
