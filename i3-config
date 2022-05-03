@@ -198,3 +198,15 @@ exec --no-startup-id feh --bg-center ~/Downloads/wide-bg2.jpg
 
 # VolumeBarIcon
 exec --no-startup-id volumeicon &
+
+# LockScreen
+exec --no-startup-id xautolock -locker "~/bin/i3lock_blank" -time 10 -detectsleep -notify 10
+# VolumeBarIcon
+exec_always volumeicon -f
+
+# Open file manager 
+bindsym $mod+Shift+f exec nautilus
+
+# Set static floating window for tkinter applications
+for_window [class="Tk"] floating enable sticky enable 
+for_window [floating] border normal
