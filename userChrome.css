@@ -1,0 +1,11 @@
+/* Firefox custom css configs */
+
+/* INCREASE BOOKMARK LABEL SIZE */
+.bookmark-item label {
+    font-size: 16px !important;
+}
+
+/* INCREASE TAB LABEL SIZE */
+.tab-text.tab-label{
+    font-size: 16px;
+}
