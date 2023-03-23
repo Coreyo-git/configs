@@ -1,4 +1,4 @@
 #!/bin/bash 
-# starts my music playist with vlc shuffle on
 
-vlc /path/playlist.xspf --random
+#random shuffle, start minimized as icon, and no notifications
+vlc /path/playlist.xspf --random --qt-start-minimized --qt-notification=0
